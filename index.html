@@ -1,648 +1,302 @@
 <!doctype html>
+<!--
+  PROJET 2.3 — Menu de Restaurant Interactif (AVANCÉ)
+  Auteur : Aristote — Akieni Academy, Cohorte 3, Phase 2
+  Objectif : HTML5 sémantique avancé, accessibilité (ARIA), 10+ balises différentes
+-->
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Menu interactif du restaurant congolais Le Congo Gourmet - Découvrez nos entrées, plats principaux, desserts et boissons traditionnels"
+      content="Menu du restaurant Mama Ngazi — cuisine congolaise authentique à Brazzaville."
     />
-    <title>Le Congo Gourmet Menu Interactif</title>
+    <meta name="author" content="Aristote" />
+    <title>Mama Ngazi — Restaurant Congolais | Menu</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ============================================================
-         HEADER  En-tête du site avec logo et navigation principale
-         ============================================================ -->
+    <!-- ================= HEADER ================= -->
     <header role="banner">
-      <h1>Le Congo Gourmet</h1>
-      <p>Restaurant traditionnel congolais Brazzaville</p>
+      <div class="brand">
+        <h1>Mama Ngazi</h1>
+        <p class="tagline">La cuisine congolaise, comme à la maison</p>
+      </div>
 
       <!-- Navigation principale -->
-      <nav role="navigation" aria-label="Navigation principale du menu">
+      <nav aria-label="Navigation du menu">
         <ul>
+          <li><a href="#special">Spécial du jour</a></li>
           <li><a href="#entrees">Entrées</a></li>
-          <li><a href="#plats">Plats principaux</a></li>
+          <li><a href="#plats">Plats</a></li>
           <li><a href="#desserts">Desserts</a></li>
           <li><a href="#boissons">Boissons</a></li>
-          <li><a href="#special">Spécial du jour</a></li>
-          <li><a href="#prix">Tableau des prix</a></li>
-          <li><a href="#horaires">Horaires</a></li>
+          <li><a href="#prix">Tarifs</a></li>
           <li><a href="#reservation">Réservation</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- ============================================================
-         MAIN  Contenu principal du menu
-         ============================================================ -->
-    <main role="main">
-      <!-- ============================================================
-             SECTION ENTRÉES
-             ============================================================ -->
+    <!-- ================= MAIN ================= -->
+    <main>
+      <!-- Section : Spécial du jour -->
+      <section id="special" aria-labelledby="special-title" class="special">
+        <h2 id="special-title">Spécial du jour</h2>
+        <article>
+          <h3>Poulet Moambé accompagné de Chikwangue</h3>
+          <p>
+            Notre plat signature : poulet mijoté dans une sauce onctueuse à base
+            de noix de palme, servi avec chikwangue chaude et riz parfumé.
+            <strong>Aujourd'hui à 4 500 FCFA</strong> au lieu de 5 500 FCFA.
+          </p>
+          <p>
+            <em
+              >Offre valable uniquement ce vendredi, dans la limite des
+              stocks.</em
+            >
+          </p>
+        </article>
+      </section>
+
+      <!-- Section : Entrées -->
       <section id="entrees" aria-labelledby="entrees-title">
         <h2 id="entrees-title">Entrées</h2>
 
-        <!-- Entrée 1 : NTABA — viande grillée -->
-        <article aria-label="NTABA, viande grillée aux épices">
-          <figure>
-            <img
-              src="images/ntaba.webp"
-              alt="Assiette de NTABA, viande de boeuf grillée avec des bananes plantains"
-            />
-            <figcaption>
-              NTABA <em>Viande grillée aux bananes</em>
-            </figcaption>
-          </figure>
-          <h3>NTABA</h3>
-          <p>
-            Mets préparé à base de viande grillée, généralement du bœuf, marinée
-            dans des épices exquises et accompagnée de bananes plantains frites.
-          </p>
-          <p><strong>Prix :</strong> 5 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Bœuf, bananes plantains, huile de
-            palme, oignons, ail, piment, thym, sel
-          </p>
+        <article class="plat">
+          <img
+            src="images/makayabu.png"
+            alt="Bol de soupe traditionnelle fumante"
+          />
+          <div>
+            <h3>Soupe de poisson salé</h3>
+            <p>
+              Bouillon parfumé au poisson fumé, tomates fraîches et légumes du
+              marché.
+            </p>
+            <p>
+              <strong>Ingrédients :</strong> poisson fumé, tomate, oignon,
+              poivron, gingembre.
+            </p>
+            <p class="prix">1 500 FCFA</p>
+          </div>
         </article>
 
-        <!-- Entrée 2 : Poulet Mayo -->
-        <article aria-label="Poulet Mayo, poulet grillé sauce mayonnaise">
-          <figure>
-            <img
-              src="images/poulet-mayo.png"
-              alt="Poulet Mayo, cuisses de poulet grillées nappées de sauce mayonnaise"
-            />
-            <figcaption>Poulet Mayo <em>Poulet grillé sauce mayo</em></figcaption>
-          </figure>
-          <h3>Poulet Mayo</h3>
-          <p>
-            Cuisses de poulet marinées aux épices, grillées au feu de bois et
-            généreusement nappées d'une sauce mayonnaise maison.
-          </p>
-          <p><strong>Prix :</strong> 4 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Poulet, mayonnaise, oignons, ail,
-            persil, citron, piment doux, sel
-          </p>
+        <article class="plat">
+          <img
+            src="images/poulet-mayo.png"
+            alt="poulet mayonnaise servi avec le manioc "
+          />
+          <div>
+            <h3>Poulet Mayonnaise</h3>
+            <p>
+              Poulet grillé servi avec une sauce mayonnaise maison et du manioc
+              bouilli.
+            </p>
+            <p>
+              <strong>Ingrédients :</strong> poulet, mayonnaise, manioc, citron,
+              épices.
+            </p>
+            <p class="prix">2 000 FCFA</p>
+          </div>
         </article>
 
-        <!-- Entrée 3 : Liboke de poisson -->
-        <article aria-label="Liboke de poisson, poisson cuit en feuilles de bananier">
-          <figure>
-            <img
-              src="images/liboke.jpg"
-              alt="Liboke de poisson, poisson frais cuit à l'étouffée dans des feuilles de bananier"
-            />
-            <figcaption>Liboke <em>Poisson en feuilles de bananier</em></figcaption>
-          </figure>
-          <h3>Liboke de poisson</h3>
-          <p>
-            Poisson frais mariné aux épices et à l'huile de palme, cuit à
-            l'étouffée dans des feuilles de bananier pour un parfum fumé unique.
-          </p>
-          <p><strong>Prix :</strong> 3 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Poisson frais, feuilles de bananier,
-            huile de palme, oignons, ail, tomates, gingembre, sel
-          </p>
-        </article>
-
-        <!-- Entrée 4 : Makayabu — poisson salé -->
-        <article aria-label="Makayabu, poisson salé mijoté">
-          <figure>
-            <img
-              src="images/makayabu.png"
-              alt="Makayabu, poisson salé mijoté dans une sauce tomate épicée"
-            />
-            <figcaption>Makayabu <em>Poisson salé mijoté</em></figcaption>
-          </figure>
-          <h3>Makayabu</h3>
-          <p>
-            Poisson salé traditionnel dessalé puis mijoté dans une sauce tomate
-            épicée à l'huile de palme, servi avec du riz ou du chikwangue.
-          </p>
-          <p><strong>Prix :</strong> 3 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Poisson salé, tomates, oignons, huile
-            de palme, ail, piment, laurier, sel
-          </p>
+        <article class="plat">
+          <img src="images/beignets.webp" alt="Beignets dorés servis chauds" />
+          <div>
+            <h3>Mikate (beignets)</h3>
+            <p>
+              Beignets moelleux servis chauds, parfaits pour commencer le repas.
+            </p>
+            <p>
+              <strong>Ingrédients :</strong> farine, levure, sucre, huile de
+              palme.
+            </p>
+            <p class="prix">1 000 FCFA</p>
+          </div>
         </article>
       </section>
 
-      <!-- ============================================================
-             SECTION PLATS PRINCIPAUX
-             ============================================================ -->
+      <!-- Section : Plats principaux -->
       <section id="plats" aria-labelledby="plats-title">
         <h2 id="plats-title">Plats principaux</h2>
 
-        <!-- Plat 1 : Poulet Moambe -->
-        <article aria-label="Poulet Moambe, plat national congolais">
-          <figure>
-            <img
-              src="images/riz-poulet.webp"
-              alt="Poulet Moambe, sauce à la noix de palme accompagné de riz"
-            />
-            <figcaption>Poulet Moambe <em>Plat national</em></figcaption>
-          </figure>
-          <h3>Poulet Moambe</h3>
-          <p>
-            Le plat emblématique du Congo-Brazzaville : poulet mijoté dans une sauce
-            onctueuse à la noix de palme, servi avec du riz blanc.
-          </p>
-          <p><strong>Prix :</strong> 12 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Poulet, noix de palme, oignons, ail,
-            tomates, piment, riz, sel
-          </p>
+        <article class="plat">
+          <img
+            src="images/viande-banane.webp"
+            alt="Viande mijotée accompagnée de bananes plantain frites"
+          />
+          <div>
+            <h3>Viande Banane</h3>
+            <p>Viande mijotée accompagnée de bananes plantain frites.</p>
+            <p>
+              <strong>Ingrédients :</strong> bœuf, banane plantain, tomate,
+              oignon, épices.
+            </p>
+            <p class="prix">5 500 FCFA</p>
+          </div>
         </article>
 
-        <!-- Plat 2 : Ngulu rôti à la braise -->
-        <article aria-label="Ngulu rôti à la braise, porc grillé">
-          <figure>
-            <img
-              src="images/oip.webp"
-              alt="Ngulu rôti à la braise, porc grillé aux épices"
-            />
-            <figcaption>Ngulu rôti <em>Porc à la braise</em></figcaption>
-          </figure>
-          <h3>Ngulu rôti à la braise</h3>
-          <p>
-            Porc mariné aux épices traditionnelles puis rôti lentement au feu de
-            bois, servi avec des bananes plantains frites et une sauce pili-pili.
-          </p>
-          <p><strong>Prix :</strong> 10 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Porc, huile de palme, ail, gingembre,
-            oignons, piment, thym, laurier, plantains, sel
-          </p>
+        <article class="plat">
+          <img
+            src="images/saka-saka.webp"
+            alt="Plat de Saka Saka aux feuilles de manioc"
+          />
+          <div>
+            <h3>Saka Saka</h3>
+            <p>
+              Feuilles de manioc pilées, cuisinées avec pâte d'arachide et
+              poisson fumé.
+            </p>
+            <p>
+              <strong>Ingrédients :</strong> feuilles de manioc, arachide,
+              poisson fumé, huile.
+            </p>
+            <p class="prix">1 500 FCFA</p>
+          </div>
         </article>
 
-        <!-- Plat 3 : Pondu -->
-        <article aria-label="Pondu, feuilles de manioc à la congolaise">
-          <figure>
-            <img
-              src="images/saka-saka.webp"
-              alt="Pondu, feuilles de manioc hachées cuisinées à la congolaise"
-            />
-            <figcaption>Pondu <em>Feuilles de manioc</em></figcaption>
-          </figure>
-          <h3>Pondu</h3>
-          <p>
-            Feuilles de manioc finement hachées, cuisinées dans une sauce
-            onctueuse à l'huile de palme et aux arachides.
-          </p>
-          <p><strong>Prix :</strong> 8 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Feuilles de manioc, huile de palme,
-            arachides, oignons, ail, piment, poisson fumé
-          </p>
+        <article class="plat">
+          <img
+            src="images/mwambe.webp"
+            alt="Plat de mwambe, poulet mijoté dans la sauce à la noix de palme"
+          />
+          <div>
+            <h3>Mwambe</h3>
+            <p>
+              Poulet mijoté dans une sauce onctueuse à base de noix de palme.
+            </p>
+            <p>
+              <strong>Ingrédients :</strong> poulet, noix de palme, tomate,
+              oignon, piment.
+            </p>
+            <p class="prix">3 000 FCFA</p>
+          </div>
         </article>
 
-        <!-- Plat 4 : Saka Saka -->
-        <article aria-label="Saka Saka, épinards congolais au poulet">
-          <figure>
-            <img
-              src="images/saka-saka.webp"
-              alt="Saka Saka, épinards congolais cuisinés avec du poulet"
-            />
-            <figcaption>Saka Saka <em>Épinards congolais</em></figcaption>
-          </figure>
-          <h3>Saka Saka</h3>
-          <p>
-            Purée d'épinards cuisinée à l'huile de palme, agrémentée de morceaux
-            de poulet et de poisson fumé.
-          </p>
-          <p><strong>Prix :</strong> 9 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Épinards, huile de palme, poulet,
-            poisson fumé, oignons, ail, piment
-          </p>
+        <article class="plat">
+          <img
+            src="images/riz-poulet.webp"
+            alt="Riz au gras accompagné de poulet"
+          />
+          <div>
+            <h3>Riz au gras avec des cuisses de poulet</h3>
+            <p>Riz blanc, servi avec des cuisses de poulet.</p>
+            <p>
+              <strong>Ingrédients :</strong> riz, tomate, oignon, viande,
+              épices.
+            </p>
+            <p class="prix">3 500 FCFA</p>
+          </div>
         </article>
 
-        <!-- Plat 5 : Fufu avec sauce gombo -->
-        <article aria-label="Fufu, pâte de manioc accompagnée de sauce gombo">
-          <figure>
-            <img
-              src="images/pate-darachide.jpg"
-              alt="Fufu, boule de pâte de manioc servie avec une sauce gombo"
-            />
-            <figcaption>Fufu <em>Pâte de manioc</em></figcaption>
-          </figure>
-          <h3>Fufu &amp; sauce gombo</h3>
-          <p>
-            Pâte de manioc traditionnelle, lisse et élastique, accompagnée d'une
-            sauce gombo épicée aux crevettes séchées.
-          </p>
-          <p><strong>Prix :</strong> 7 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Farine de manioc, gombo, crevettes
-            séchées, oignons, huile de palme, piment
-          </p>
-        </article>
-
-        <!-- Plat 6 : Mwambe -->
-        <article aria-label="Mwambe, poulet à la noix de coco">
-          <figure>
-            <img
-              src="images/mwambe.webp"
-              alt="Mwambe, poulet mijoté dans une sauce crémeuse à la noix de coco"
-            />
-            <figcaption>Mwambe <em>Poulet à la noix de coco</em></figcaption>
-          </figure>
-          <h3>Mwambe</h3>
-          <p>
-            Poulet mijoté dans une sauce crémeuse à la noix de coco et aux
-            épices douces, servi avec du riz parfumé.
-          </p>
-          <p><strong>Prix :</strong> 11 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Poulet, lait de coco, noix de coco
-            râpée, oignons, ail, gingembre, curcuma, riz
-          </p>
-        </article>
+        <blockquote cite="images/poulet-mayo.png">
+          « La cuisine congolaise, c'est d'abord un partage. Chez Mama Ngazi, on
+          cuisine comme on aime : sans compter. »
+          <footer>— <cite>Mama Ngazi</cite>, chef fondatrice</footer>
+        </blockquote>
       </section>
 
-      <!-- ============================================================
-             SECTION DESSERTS
-             ============================================================ -->
+      <!-- Section : Desserts -->
       <section id="desserts" aria-labelledby="desserts-title">
         <h2 id="desserts-title">Desserts</h2>
 
-        <!-- Dessert 1 : Makaté -->
-        <article aria-label="Makaté, beignets congolais au sucre">
-          <figure>
-            <img
-              src="images/beignets.webp"
-              alt="Makaté, beignets congolais saupoudrés de sucre glace"
-            />
-            <figcaption>Makaté <em>Beignets congolais</em></figcaption>
-          </figure>
-          <h3>Makaté</h3>
-          <p>
-            Beignets traditionnels congolais, légers et aérés, généreusement
-            saupoudrés de sucre glace.
-          </p>
-          <p><strong>Prix :</strong> 3 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Farine, sucre glace, levure, oeufs,
-            lait, beurre, huile de friture
-          </p>
+        <article class="plat">
+          <img src="images/Bananes.jpg" alt="Bananes plantain frites dorées" />
+          <div>
+            <h3>Banane plantain frite au miel</h3>
+            <p>Bananes plantain mûres, frites et nappées de miel local.</p>
+            <p class="prix">1 500 FCFA</p>
+          </div>
         </article>
 
-        <!-- Dessert 2 : Kwanga doux -->
-        <article aria-label="Kwanga doux, pain de manioc sucré">
-          <figure>
-            <img
-              src="images/oip.webp"
-              alt="Kwanga doux, pain de manioc sucré servi en tranches"
-            />
-            <figcaption>Kwanga doux <em>Pain de manioc sucré</em></figcaption>
-          </figure>
-          <h3>Kwanga doux</h3>
-          <p>
-            Pain de manioc naturellement fermenté, version sucrée accompagnée de
-            miel local et de noix de coco.
-          </p>
-          <p><strong>Prix :</strong> 3 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Manioc, sucre, noix de coco râpée,
-            miel, vanille
-          </p>
-        </article>
-
-        <!-- Dessert 3 : Beignets de banane -->
-        <article aria-label="Beignets de banane plantain">
-          <figure>
-            <img
-              src="images/oip-2.webp"
-              alt="Beignets de banane plantain dorés et croustillants"
-            />
-            <figcaption>
-              Beignets de banane <em>Plantain frit sucré</em>
-            </figcaption>
-          </figure>
-          <h3>Beignets de banane plantain</h3>
-          <p>
-            Tranches de banane plantain mûre, frites et caramélisées, servies
-            avec une sauce au chocolat noir.
-          </p>
-          <p><strong>Prix :</strong> 4 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Banane plantain mûre, huile de
-            friture, sucre, cannelle, chocolat noir
-          </p>
-        </article>
-
-        <!-- Dessert 4 : Salade de fruits tropicaux -->
-        <article aria-label="Salade de fruits tropicaux frais">
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Salade de fruits tropicaux frais composée de mangue, papaye et ananas"
-            />
-            <figcaption>
-              Salade de fruits <em>Fruits tropicaux frais</em>
-            </figcaption>
-          </figure>
-          <h3>Salade de fruits tropicaux</h3>
-          <p>
-            Assortiment de fruits frais de saison : mangue, papaye, ananas,
-            pastèque et fruit de la passion.
-          </p>
-          <p><strong>Prix :</strong> 4 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Mangue, papaye, ananas, pastèque,
-            fruit de la passion, sirop de sucre de canne, menthe fraîche
-          </p>
+        <article class="plat">
+          <img src="images/Brochette.webp" alt="Brochette de viande " />
+          <div>
+            <h3>Brochette de viande</h3>
+            <p>Viande de bœuf et de porc, marinée dans des épices locales.</p>
+            <p class="prix">2 000 FCFA</p>
+          </div>
         </article>
       </section>
 
-      <!-- ============================================================
-             SECTION BOISSONS
-             ============================================================ -->
+      <!-- Section : Boissons -->
       <section id="boissons" aria-labelledby="boissons-title">
         <h2 id="boissons-title">Boissons</h2>
-
-        <article aria-label="Bière Primus, bière congolaise légère">
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Bouteille de bière Primus, bière blonde congolaise"
-            />
-            <figcaption>Primus <em>Bière congolaise</em></figcaption>
-          </figure>
-          <h3>Primus</h3>
-          <p>
-            Bière blonde légère et rafraîchissante, la plus célèbre du Congo-Brazzaville,
-            brassée à Brazzaville depuis 1923.
-          </p>
-          <p><strong>Prix :</strong> 3 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Eau, malt d'orge, houblon, maïs,
-            levure
-          </p>
-        </article>
-
-        <article aria-label="Bière Tembo, bière brune congolaise">
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Bouteille de bière Tembo, bière brune congolaise"
-            />
-            <figcaption>Tembo <em>Bière brune</em></figcaption>
-          </figure>
-          <h3>Tembo</h3>
-          <p>
-            Bière brune ambrée au goût caramélisé, brassée dans la région du
-            Katanga. Idéale pour accompagner les grillades.
-          </p>
-          <p><strong>Prix :</strong> 3 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Eau, malt d'orge, houblon, caramel,
-            levure
-          </p>
-        </article>
-
-        <article
-          aria-label="Jus de gingembre, boisson piquante rafraîchissante"
-        >
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Verre de jus de gingembre maison avec glaçons et feuilles de menthe"
-            />
-            <figcaption>Jus de gingembre <em>Boisson piquante</em></figcaption>
-          </figure>
-          <h3>Jus de gingembre</h3>
-          <p>
-            Boisson traditionnelle piquante et rafraîchissante, préparée avec du
-            gingembre frais, du citron et du sucre de canne.
-          </p>
-          <p><strong>Prix :</strong> 2 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Gingembre frais, citron vert, sucre
-            de canne, eau, menthe fraîche
-          </p>
-        </article>
-
-        <article aria-label="Jus de bissap, boisson à l'hibiscus">
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Verre de jus de bissap, infusion de fleurs d'hibiscus"
-            />
-            <figcaption>Bissap <em>Jus d'hibiscus</em></figcaption>
-          </figure>
-          <h3>Jus de bissap</h3>
-          <p>
-            Infusion de fleurs d'hibiscus sucrée, parfumée à la menthe et au
-            gingembre. Une boisson désaltérante ancestrale.
-          </p>
-          <p><strong>Prix :</strong> 2 500 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Fleurs d'hibiscus séchées, sucre de
-            canne, menthe fraîche, gingembre, eau
-          </p>
-        </article>
-
-        <article aria-label="Café congolais, café robusta du Congo-Brazzaville">
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Tasse de café congolais noir, originaire de la Sangha"
-            />
-            <figcaption>Café congolais <em>Robusta de la Sangha</em></figcaption>
-          </figure>
-          <h3>Café congolais</h3>
-          <p>
-            Café robusta cultivé dans la région de la Sangha, torréfié
-            localement pour un arôme puissant et une belle créma.
-          </p>
-          <p><strong>Prix :</strong> 2 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Grains de café robusta de la Sangha, eau
-          </p>
-        </article>
-
-        <article aria-label="Eau de coco, boisson naturelle rafraîchissante">
-          <figure>
-            <img
-              src="images/boissons.webp"
-              alt="Verre d'eau de coco fraîche avec pulpe de coco"
-            />
-            <figcaption>
-              Eau de coco <em>Jus de noix de coco fraîche</em>
-            </figcaption>
-          </figure>
-          <h3>Eau de coco fraîche</h3>
-          <p>
-            Eau de coco naturelle extraite de noix de coco fraîchement
-            cueillies, servie glacée dans sa noix.
-          </p>
-          <p><strong>Prix :</strong> 3 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Eau de coco naturelle, pulpe de coco
-            fraîche
-          </p>
-        </article>
+        <ul class="boissons">
+          <li>Jus de bissap frais — <strong>1 000 FCFA</strong></li>
+          <li>Jus de gingembre — <strong>1 000 FCFA</strong></li>
+          <li>Jus de tamarin — <strong>1 000 FCFA</strong></li>
+          <li>Ngok' (bière locale) — <strong>1 500 FCFA</strong></li>
+          <li>Eau minérale 50cl — <strong>500 FCFA</strong></li>
+          <li>Café / Thé — <strong>800 FCFA</strong></li>
+        </ul>
       </section>
 
-      <!-- ============================================================
-             SECTION SPÉCIAL DU JOUR
-             ============================================================ -->
-      <section id="special" aria-labelledby="special-title">
-        <h2 id="special-title">Spécial du jour</h2>
-
-        <article aria-label="Plat spécial du jour : Poulet Moambe">
-          <figure>
-            <img
-              src="images/poulet-moambe.jpg"
-              alt="Poulet Moambe, poulet mijoté dans une sauce aux arachides et aux épices"
-            />
-            <figcaption>
-              Spécial du jour <em>Poulet Moambe aux arachides</em>
-            </figcaption>
-          </figure>
-          <h3>Poulet Moambe</h3>
-          <p>
-            <strong>Mise en avant :</strong>
-            <span aria-label="Plat vedette"> Plat vedette de la semaine</span>
-
-            <span aria-label="Recommandation du chef">
-              Recommendation du chef</span
-            >
-          </p>
-          <p>
-            Poulet mijoté lentement dans une onctueuse sauce aux arachides et
-            aux épices traditionnelles, accompagné de riz blanc parfumé et de
-            légumes frais. Un classique incontournable de la cuisine congolaise !
-          </p>
-          <p><strong>Prix :</strong> 15 000 FCFA</p>
-          <p>
-            <strong>Ingrédients :</strong> Poulet, arachides, huile de palme,
-            ail, gingembre, oignons, tomates, piment, riz, légumes frais, sel
-          </p>
-        </article>
-      </section>
-
-      <!-- ============================================================
-             SECTION TABLEAU COMPARATIF DES PRIX
-             ============================================================ -->
+      <!-- Tableau des prix -->
       <section id="prix" aria-labelledby="prix-title">
-        <h2 id="prix-title">Comparatif des prix</h2>
-
-        <table
-          role="table"
-          aria-label="Tableau comparatif des prix par catégorie"
-        >
+        <h2 id="prix-title">Tarifs par catégorie</h2>
+        <table>
           <caption>
-            Comparaison des prix par catégorie de plats Le Congo Gourmet
+            Comparatif des prix moyens par catégorie
           </caption>
           <thead>
             <tr>
               <th scope="col">Catégorie</th>
-              <th scope="col">Nombre de plats</th>
-              <th scope="col">Prix minimum</th>
-              <th scope="col">Prix maximum</th>
+              <th scope="col">Prix mini</th>
+              <th scope="col">Prix maxi</th>
+              <th scope="col">Prix moyen</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Entrées</td>
-              <td>4</td>
-              <td>3 000 FCFA</td>
-              <td>5 500 FCFA</td>
-            </tr>
-            <tr>
-              <td>Plats principaux</td>
-              <td>6</td>
-              <td>7 000 FCFA</td>
-              <td>12 000 FCFA</td>
-            </tr>
-            <tr>
-              <td>Desserts</td>
-              <td>4</td>
-              <td>3 000 FCFA</td>
-              <td>4 500 FCFA</td>
-            </tr>
-            <tr>
-              <td>Boissons</td>
-              <td>6</td>
+              <th scope="row">Entrées</th>
+              <td>1 000 FCFA</td>
               <td>2 000 FCFA</td>
-              <td>3 000 FCFA</td>
+              <td>1 500 FCFA</td>
+            </tr>
+            <tr>
+              <th scope="row">Plats</th>
+              <td>3 500 FCFA</td>
+              <td>6 000 FCFA</td>
+              <td>4 750 FCFA</td>
+            </tr>
+            <tr>
+              <th scope="row">Desserts</th>
+              <td>1 500 FCFA</td>
+              <td>2 000 FCFA</td>
+              <td>1 750 FCFA</td>
+            </tr>
+            <tr>
+              <th scope="row">Boissons</th>
+              <td>500 FCFA</td>
+              <td>1 500 FCFA</td>
+              <td>1 000 FCFA</td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <th scope="row" colspan="3">Spécial du jour</th>
-              <td>15 000 FCFA</td>
+              <th scope="row" colspan="3">Menu complet estimé</th>
+              <td><strong>≈ 9 000 FCFA</strong></td>
             </tr>
           </tfoot>
         </table>
       </section>
 
-      <!-- ============================================================
-             SECTION HORAIRES (liste de définition)
-             ============================================================ -->
+      <!-- Horaires -->
       <section id="horaires" aria-labelledby="horaires-title">
         <h2 id="horaires-title">Horaires d'ouverture</h2>
-
-        <dl aria-label="Horaires d'ouverture du restaurant">
-          <dt>Lundi</dt>
-          <dd>11 h 00 – 22 h 00</dd>
-
-          <dt>Mardi</dt>
-          <dd>11 h 00 – 22 h 00</dd>
-
-          <dt>Mercredi</dt>
-          <dd>11 h 00 – 22 h 00</dd>
-
-          <dt>Jeudi</dt>
-          <dd>11 h 00 – 22 h 00</dd>
-
-          <dt>Vendredi</dt>
-          <dd>11 h 00 – 23 h 00</dd>
-
-          <dt>Samedi</dt>
-          <dd>10 h 00 – 23 h 00</dd>
-
+        <dl>
+          <dt>Lundi – Jeudi</dt>
+          <dd>11h00 – 22h00</dd>
+          <dt>Vendredi – Samedi</dt>
+          <dd>11h00 – minuit</dd>
           <dt>Dimanche</dt>
-          <dd>10 h 00 – 21 h 00</dd>
+          <dd>12h00 – 20h00</dd>
+          <dt>Jours fériés</dt>
+          <dd>Fermé</dd>
         </dl>
-
-        <p aria-label="Fermeture hebdomadaire">
-          <strong>Fermé le :</strong> 1ᵉʳ janvier, 1er mai, 25 décembre.
-        </p>
-
-        <details>
-          <summary>Horaires des jours fériés</summary>
-          <p>
-            Les jours fériés, le restaurant est ouvert de 12 h à 18 h (sauf
-            le 1er mai, 25 décembre et 1er janvier).
-          </p>
-        </details>
       </section>
-
-      <!-- ============================================================
-             ASIDE Témoignages clients
-             ============================================================ -->
-      <aside aria-label="Témoignages de nos clients">
-        <h2>Ce que disent nos clients</h2>
-        <blockquote>
-          <p>
-            "Le meilleur restaurant congolais de Brazzaville ! Le Poulet Moambe
-            est tout simplement divin."
-          </p>
-          <footer>&mdash; Marie K., Brazzaville</footer>
-        </blockquote>
-        <blockquote>
-          <p>
-            "Ambiance chaleureuse, plats authentiques et service impeccable. Je
-            recommande le Mwambe à toutes et à tous."
-          </p>
-          <footer>&mdash; Jean-Pierre M., Gombe</footer>
-        </blockquote>
-      </aside>
 
       <!-- ============================================================
              SECTION FORMULAIRE DE RÉSERVATION
@@ -794,36 +448,29 @@
       </section>
     </main>
 
-    <!-- ============================================================
-         FOOTER  Pied de page complet
-         ============================================================ -->
+    <!-- ================= FOOTER ================= -->
     <footer role="contentinfo">
-      <h2>Contact &amp; informations</h2>
-
-      <p>
-        <strong>Adresse :</strong> 15 Avenue de la Libération, Centre-ville, Brazzaville,
-        Congo-Brazzaville
-      </p>
-      <p><strong>Téléphone :</strong> +242 06 123 45 67</p>
-      <p><strong>Email :</strong> contact@lecongogourmet.cg</p>
-
-      <p>
-        <strong>Horaires :</strong> Du lundi au jeudi 11 h – 22 h, vendredi et
-        samedi 10 h – 23 h, dimanche 10 h – 21 h
-      </p>
-
-      <p>
-        <strong>Réseaux sociaux :</strong>
-        Facebook &nbsp;|&nbsp; Instagram &nbsp;|&nbsp; Twitter &nbsp;|&nbsp;
-        WhatsApp
-      </p>
-
-      <p>
-        <small
-          >&copy; 2026 Le Congo Gourmet Tous droits réservés. Réalisé avec
-          <abbr title="HyperText Markup Language 5">HTML5</abbr>
-          sémantique.</small
-        >
+      <div>
+        <h2>Contact</h2>
+        <address>
+          <strong>Restaurant Mama Ngazi</strong><br />
+          45, avenue de l'Indépendance<br />
+          Brazzaville, République du Congo<br />
+          Téléphone : <a href="tel:+242060000000">+242 06 00 00 00</a><br />
+          Email : <a href="mailto:contact@mamangazi.cg">contact@mamangazi.cg</a>
+        </address>
+      </div>
+      <div>
+        <h2>Suivez-nous</h2>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+      <p class="copy">
+        &copy; 2026 Mama Ngazi — Projet réalisé par Aristote pour Akieni
+        Academy.
       </p>
     </footer>
   </body>
