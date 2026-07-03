@@ -1,36 +1,36 @@
 # PROJET 2.3 - Menu de Restaurant Interactif
 
-Niveau : Avance  
-Technologies : HTML5 semantique uniquement (zero CSS, zero JavaScript)
+Niveau : Avancé  
+Technologies : HTML5 sémantique uniquement (zéro CSS, zéro JavaScript)
 
 ## Description
 
-Site web monopage presentant le menu complet du Congo Gourmet, un restaurant traditionnel congolais situe a Brazzaville (Congo-Brazzaville). Le projet met en oeuvre une structuration HTML5 rigoureuse, des balises semantiques, une accessibilite ARIA, et un contenu authentique.
+Site web monopage présentant le menu du restaurant Mama Ngazi, un restaurant traditionnel congolais situé à Brazzaville (Congo-Brazzaville). Le projet met en œuvre une structuration HTML5 rigoureuse, des balises sémantiques et une accessibilité ARIA.
 
 ## Installation
 
-1. Cloner le depot :
+1. Cloner le dépôt :
    ```
    git clone https://github.com/babacleven/projet-2.3-restaurant-menu.git
    ```
 2. Ouvrir `index.html` dans un navigateur moderne.
 
-Aucune dependance ni serveur requis.
+Aucune dépendance ni serveur requis.
 
 ## Utilisation
 
-La navigation principale permet d'acceder aux sections suivantes :
+La navigation principale permet d'accéder aux sections suivantes :
 
-- Entrees (4 articles)
-- Plats principaux (6 articles)
-- Desserts (4 articles)
+- Spécial du jour
+- Entrées (3 articles)
+- Plats principaux (4 articles)
+- Desserts (2 articles)
 - Boissons (6 articles)
-- Special du jour
 - Tableau comparatif des prix
 - Horaires d'ouverture
-- Formulaire de reservation
+- Formulaire de réservation
 
-Le formulaire de reservation valide les champs cote client (HTML5 native) avant soumission.
+Le formulaire de réservation valide les champs côté client (HTML5 native) avant soumission.
 
 ## Structure du projet
 
@@ -38,12 +38,12 @@ Le formulaire de reservation valide les champs cote client (HTML5 native) avant 
 index.html
 images/
     beignets.webp
+    bananes.jpg
     boissons.webp
+    brochette.webp
     liboke.jpg
     makayabu.png
     mwambe.webp
-    ntaba.webp
-    oip.webp
     oip-2.webp
     pate-darachide.jpg
     pate-darachide.webp
@@ -51,51 +51,49 @@ images/
     poulet-moambe.jpg
     riz-poulet.webp
     saka-saka.webp
+    viande-banane.webp
 ```
 
 ### Architecture du document HTML
 
-- `header` : En-tete avec navigation (8 ancres internes)
+- `header` : En-tête avec navigation (7 ancres internes)
 - `main` : Contenu principal
-  - `section#entrees` : 4 entrees
-  - `section#plats` : 6 plats principaux
-  - `section#desserts` : 4 desserts
+  - `section#special` : Spécial du jour
+  - `section#entrees` : 3 entrées
+  - `section#plats` : 4 plats principaux
+  - `section#desserts` : 2 desserts
   - `section#boissons` : 6 boissons
-  - `section#special` : Special du jour
   - `section#prix` : Tableau comparatif des prix
-  - `section#horaires` : Liste de definition (dl)
-  - `aside` : Temoignages clients
-  - `section#reservation` : Formulaire de reservation
-- `footer` : Coordonnees, horaires, reseaux sociaux, copyright
+  - `section#horaires` : Liste de définition (dl)
+  - `section#reservation` : Formulaire de réservation
+- `footer` : Coordonnées et copyright
 
-### Balises HTML5 utilisees
+### Balises HTML5 utilisées
 
-header, nav, main, section, article, figure, figcaption, table, thead, tbody, tfoot, caption, dl, dt, dd, form, fieldset, legend, details, summary, aside, blockquote, footer, abbr, span, strong, em, small (25+ types)
+header, nav, main, section, article, table, thead, tbody, caption, dl, dt, dd, form, blockquote, address, footer, span, strong, em, small, h1, h2, h3, p, ul, ol, li, a, img, label, input, select, option, textarea, button, br, meta, link, title (30+ types)
 
-### Accessibilite
+### Accessibilité
 
-- Attributs `aria-label` et `aria-labelledby` sur chaque section et element interactif
-- `aria-required="true"` sur les champs obligatoires
+- Attributs `aria-labelledby` sur chaque section
 - Attributs `alt` descriptifs sur toutes les images
-- `scope` sur les en-tetes de tableau
-- Roles ARIA : banner, navigation, main, contentinfo
+- `scope` sur les en-têtes de tableau
+- `aria-label` sur la navigation et le formulaire
+- Rôles ARIA natifs (header, nav, main, footer) sans redondance
 
-## Technologies utilisees
+## Technologies utilisées
 
 - HTML5 (norme W3C)
 - Aucune feuille de style CSS
 - Aucun script JavaScript
 
-## Conformite PROJET 2.3
+## Conformité PROJET 2.3
 
-- HTML5 strict, zero CSS et zero JavaScript
-- 25+ types de balises semantiques HTML5
-- 8 ancres de navigation interne
-- 13 images avec figure + figcaption
-- Tableau comparatif avec caption, thead, tbody, tfoot
-- Liste de definition (dl) pour les horaires
-- Formulaire complet avec validation native
-- Footer avec coordonnees completes
-- Accessibilite ARIA complete
-- 830+ lignes de code
+- HTML5 strict, zéro CSS et zéro JavaScript
+- 30+ types de balises sémantiques HTML5
+- 7 ancres de navigation interne
+- Images avec attributs alt descriptifs
+- Tableau comparatif avec caption, thead, tbody
+- Liste de définition (dl) pour les horaires
+- Formulaire complet avec validation native HTML5
+- Accessibilité ARIA sans attributs redondants
 - Contenu authentique congolais
